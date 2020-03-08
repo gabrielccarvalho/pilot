@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { Button } from 'former-kit'
 import CardOptions from './CardOptions'
+import OtherOptions from './OtherOptions'
 import ProgressBar from './ProgressBar'
 import OnboardingBackground from '../../components/OnboardingBackground'
 import styles from './styles.css'
@@ -18,7 +19,14 @@ const OnboardingContainer = ({
   t,
   userName,
 }) => {
-  const handleSubmit = answer => onSubmit(answer)
+  const [others, setOthers] = useState({})
+
+  const handleOthers = (value, isChecked) => setOthers({
+    ...others,
+    [value]: isChecked,
+  })
+
+  const handleSubmit = answer => onSubmit(answer, others)
 
   const header = isFirstQuestion
     ? (<p className={styles.welcome}>{t('pages.onboarding.welcome', { userName })}</p>)
@@ -34,6 +42,11 @@ const OnboardingContainer = ({
             handleSubmit={handleSubmit}
             images={questionSettings.images}
             options={question.options}
+          />
+          <OtherOptions
+            options={question.others}
+            others={others}
+            handleOthers={handleOthers}
           />
         </div>
         <ProgressBar
