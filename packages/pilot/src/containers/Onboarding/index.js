@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { Button } from 'former-kit'
 import CardOptions from './CardOptions'
+import DropdownOptions from './DropownOptions'
 import OtherOptions from './OtherOptions'
 import ProgressBar from './ProgressBar'
 import OnboardingBackground from '../../components/OnboardingBackground'
@@ -11,6 +12,7 @@ import ArrowBack from './arrow-back.svg'
 
 const OnboardingContainer = ({
   isFirstQuestion,
+  isLastQuestion,
   onReturn,
   onSkipOnboarding,
   onSubmit,
@@ -38,11 +40,26 @@ const OnboardingContainer = ({
         <div>
           {header}
           <h1 className={styles.title}>{question.title}</h1>
-          <CardOptions
-            handleSubmit={handleSubmit}
-            images={questionSettings.images}
-            options={question.options}
-          />
+          {
+            questionSettings.type === 'card'
+              ? (
+                <CardOptions
+                  handleSubmit={handleSubmit}
+                  images={questionSettings.images}
+                  options={question.options}
+                />
+              )
+              : (
+                <DropdownOptions
+                  handleSubmit={handleSubmit}
+                  isLastQuestion={isLastQuestion}
+                  options={question.options}
+                  placeholderPath={questionSettings.placeholder}
+                  t={t}
+                />
+              )
+          }
+
           <OtherOptions
             options={question.others}
             others={others}
@@ -61,6 +78,7 @@ const OnboardingContainer = ({
 
 OnboardingContainer.propTypes = {
   isFirstQuestion: PropTypes.bool.isRequired,
+  isLastQuestion: PropTypes.bool.isRequired,
   onReturn: PropTypes.func,
   onSkipOnboarding: PropTypes.func,
   onSubmit: PropTypes.func,

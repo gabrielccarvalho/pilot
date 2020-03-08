@@ -121,6 +121,9 @@ storiesOf('Containers|Onboarding')
   .add('With Card, Without Icon and Subtitle', () => (
     <Onboarding.WithCardWithoutIconAndSubtitle />
   ))
+  .add('When Dropdown', () => (
+    <Onboarding.WithDropdown />
+  ))
 
 storiesOf('Containers|Page containers', module)
   .addDecorator(withA11y)

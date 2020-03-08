@@ -3,6 +3,7 @@ import BoxIcon from './box.svg'
 export default {
   withCardIconAndSubtitle: {
     isFirstQuestion: true,
+    isLastQuestion: false,
     loading: false,
     question: {
       label: 'integration',
@@ -36,6 +37,7 @@ export default {
   },
   withCardIconAndWithoutSubtitle: {
     isFirstQuestion: false,
+    isLastQuestion: false,
     loading: false,
     question: {
       label: 'already_selling',
@@ -66,6 +68,7 @@ export default {
   },
   withCardWithoutIconAndSubtitle: {
     isFirstQuestion: false,
+    isLastQuestion: false,
     loading: false,
     question: {
       label: 'is_site_ready',
@@ -95,6 +98,32 @@ export default {
       images: [],
       progressPercent: 60,
       type: 'card',
+    },
+    userName: 'Eduardo',
+  },
+  withDropdown: {
+    isFirstQuestion: false,
+    isLastQuestion: true,
+    loading: false,
+    question: {
+      label: 'plataform',
+      options: [
+        {
+          label: 'WooCommerce',
+          value: 'woocommerce',
+        },
+        {
+          label: 'Shopify',
+          value: 'shopify',
+        },
+      ],
+      others: [],
+      title: 'E qual é a sua plataforma',
+    },
+    questionSettings: {
+      placeholder: 'some.path',
+      progressPercent: 75,
+      type: 'drop-down',
     },
     userName: 'Eduardo',
   },

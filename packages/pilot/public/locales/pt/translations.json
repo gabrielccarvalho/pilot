@@ -608,6 +608,8 @@
   },
   "pages": {
     "onboarding": {
+      "advance_step": "Avançar",
+      "last_step": "Finalizar",
       "skip": "Pular introdução",
       "welcome": "Boas-vindas, {{userName}}!"
     },

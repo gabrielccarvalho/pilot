@@ -23,8 +23,16 @@ const WithCardWithoutIconAndSubtitle = () => (
   />
 )
 
+const WithDropdown = () => (
+  <OnboardingContainer
+    {...mocks.withDropdown}
+    t={t => t}
+  />
+)
+
 export default {
   WithCardIconAndSubtitle,
   WithCardIconAndWithoutSubtitle,
   WithCardWithoutIconAndSubtitle,
+  WithDropdown,
 }
