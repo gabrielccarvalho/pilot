@@ -608,7 +608,8 @@
   },
   "pages": {
     "onboarding": {
-      "skip": "Pular introdução"
+      "skip": "Pular introdução",
+      "welcome": "Boas-vindas, {{userName}}!"
     },
     "recipient_detail": {
       "anticipation": "Antecipação",

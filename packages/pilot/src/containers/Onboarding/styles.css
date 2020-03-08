@@ -5,3 +5,7 @@
   justify-content: space-between;
   width: 400px;
 }
+
+.welcome {
+  margin-bottom: 0;
+}
