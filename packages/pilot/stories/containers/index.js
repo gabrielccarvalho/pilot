@@ -124,6 +124,9 @@ storiesOf('Containers|Onboarding')
   .add('When Dropdown', () => (
     <Onboarding.WithDropdown />
   ))
+  .add('When Loading Question', () => (
+    <Onboarding.WhenLoading />
+  ))
 
 storiesOf('Containers|Page containers', module)
   .addDecorator(withA11y)

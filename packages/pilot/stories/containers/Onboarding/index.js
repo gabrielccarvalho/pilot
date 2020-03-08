@@ -2,6 +2,13 @@ import React from 'react'
 import OnboardingContainer from '../../../src/containers/Onboarding'
 import mocks from './mocks'
 
+const WhenLoading = () => (
+  <OnboardingContainer
+    {...mocks.whenLoading}
+    t={t => t}
+  />
+)
+
 const WithCardIconAndSubtitle = () => (
   <OnboardingContainer
     {...mocks.withCardIconAndSubtitle}
@@ -31,6 +38,7 @@ const WithDropdown = () => (
 )
 
 export default {
+  WhenLoading,
   WithCardIconAndSubtitle,
   WithCardIconAndWithoutSubtitle,
   WithCardWithoutIconAndSubtitle,

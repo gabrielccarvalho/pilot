@@ -1,5 +1,15 @@
 @import "former-kit-skin-pagarme/dist/styles/webfonts/roboto/index.css";
 
+.loading {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+
+  & svg {
+    width: 100px;
+  }
+}
+
 .onboardingQuestions {
   display: flex;
   flex-direction: column;

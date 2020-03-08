@@ -1,6 +1,14 @@
 import BoxIcon from './box.svg'
 
 export default {
+  whenLoading: {
+    isFirstQuestion: false,
+    isLastQuestion: false,
+    loading: true,
+    question: {},
+    questionSettings: {},
+    userName: 'Eduardo',
+  },
   withCardIconAndSubtitle: {
     isFirstQuestion: true,
     isLastQuestion: false,

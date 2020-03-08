@@ -6,6 +6,7 @@ import DropdownOptions from './DropownOptions'
 import OtherOptions from './OtherOptions'
 import ProgressBar from './ProgressBar'
 import OnboardingBackground from '../../components/OnboardingBackground'
+import Spinner from '../../components/Spinner'
 import styles from './styles.css'
 
 import ArrowBack from './arrow-back.svg'
@@ -13,6 +14,7 @@ import ArrowBack from './arrow-back.svg'
 const OnboardingContainer = ({
   isFirstQuestion,
   isLastQuestion,
+  loading,
   onReturn,
   onSkipOnboarding,
   onSubmit,
@@ -29,6 +31,16 @@ const OnboardingContainer = ({
   })
 
   const handleSubmit = answer => onSubmit(answer, others)
+
+  if (loading) {
+    return (
+      <OnboardingBackground>
+        <div className={styles.loading}>
+          <Spinner />
+        </div>
+      </OnboardingBackground>
+    )
+  }
 
   const header = isFirstQuestion
     ? (<p className={styles.welcome}>{t('pages.onboarding.welcome', { userName })}</p>)
@@ -79,6 +91,7 @@ const OnboardingContainer = ({
 OnboardingContainer.propTypes = {
   isFirstQuestion: PropTypes.bool.isRequired,
   isLastQuestion: PropTypes.bool.isRequired,
+  loading: PropTypes.bool.isRequired,
   onReturn: PropTypes.func,
   onSkipOnboarding: PropTypes.func,
   onSubmit: PropTypes.func,
