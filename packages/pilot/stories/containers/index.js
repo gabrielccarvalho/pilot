@@ -105,9 +105,16 @@ import RecipientDetails from './RecipientDetails'
 
 import EmptyState from './EmptyState'
 
+import Onboarding from './Onboarding'
+
 storiesOf('Containers|Bank/Account', module)
   .add('selector', () => <BankAccountSelector />)
   .add('settings', () => <BankAccount />)
+
+storiesOf('Containers|Onboarding')
+  .add('Default Onboarding', () => (
+    <Onboarding.OnboardingExample />
+  ))
 
 storiesOf('Containers|Page containers', module)
   .addDecorator(withA11y)
