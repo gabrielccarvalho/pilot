@@ -1,3 +1,5 @@
+@import "former-kit-skin-pagarme/dist/styles/webfonts/roboto/index.css";
+
 .onboardingQuestions {
   display: flex;
   flex-direction: column;
@@ -8,4 +10,13 @@
 
 .welcome {
   margin-bottom: 0;
+}
+
+.title {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 41px;
+  margin-bottom: 50px;
+  margin-top: 8px;
 }

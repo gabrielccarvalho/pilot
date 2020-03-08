@@ -112,8 +112,14 @@ storiesOf('Containers|Bank/Account', module)
   .add('settings', () => <BankAccount />)
 
 storiesOf('Containers|Onboarding')
-  .add('Default Onboarding', () => (
-    <Onboarding.OnboardingExample />
+  .add('With Card, Icon and Subtitle', () => (
+    <Onboarding.WithCardIconAndSubtitle />
+  ))
+  .add('With Card, Icon and Without Subtitle', () => (
+    <Onboarding.WithCardIconAndWithoutSubtitle />
+  ))
+  .add('With Card, Without Icon and Subtitle', () => (
+    <Onboarding.WithCardWithoutIconAndSubtitle />
   ))
 
 storiesOf('Containers|Page containers', module)
