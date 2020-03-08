@@ -607,6 +607,9 @@
     }
   },
   "pages": {
+    "onboarding": {
+      "skip": "Pular introdução"
+    },
     "recipient_detail": {
       "anticipation": "Antecipação",
       "anticipation_1025": "Antecipação 1025",
