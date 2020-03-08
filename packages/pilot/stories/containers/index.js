@@ -127,6 +127,9 @@ storiesOf('Containers|Onboarding')
   .add('When Loading Question', () => (
     <Onboarding.WhenLoading />
   ))
+  .add('When DeadEnd', () => (
+    <Onboarding.WhenDeadEnd />
+  ))
 
 storiesOf('Containers|Page containers', module)
   .addDecorator(withA11y)

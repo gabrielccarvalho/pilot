@@ -46,6 +46,18 @@ const OnboardingContainer = ({
     ? (<p className={styles.welcome}>{t('pages.onboarding.welcome', { userName })}</p>)
     : <Button fill="clean" icon={<ArrowBack />} onClick={onReturn} />
 
+  const { deadEnd: DeadEnd } = questionSettings
+  if (DeadEnd) {
+    return (
+      <OnboardingBackground>
+        <div>
+          {header}
+          <DeadEnd onSubmit={handleSubmit} t={t} />
+        </div>
+      </OnboardingBackground>
+    )
+  }
+
   return (
     <OnboardingBackground>
       <div className={styles.onboardingQuestions}>

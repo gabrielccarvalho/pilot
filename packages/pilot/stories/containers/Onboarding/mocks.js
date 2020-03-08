@@ -1,6 +1,17 @@
 import BoxIcon from './box.svg'
+import SampleDeadEnd from './SampleDeadEnd'
 
 export default {
+  whenDeadEnd: {
+    isFirstQuestion: false,
+    isLastQuestion: false,
+    loading: false,
+    question: {},
+    questionSettings: {
+      deadEnd: SampleDeadEnd,
+    },
+    userName: 'Eduardo',
+  },
   whenLoading: {
     isFirstQuestion: false,
     isLastQuestion: false,

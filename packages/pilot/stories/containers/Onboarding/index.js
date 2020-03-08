@@ -2,6 +2,13 @@ import React from 'react'
 import OnboardingContainer from '../../../src/containers/Onboarding'
 import mocks from './mocks'
 
+const WhenDeadEnd = () => (
+  <OnboardingContainer
+    {...mocks.whenDeadEnd}
+    t={t => t}
+  />
+)
+
 const WhenLoading = () => (
   <OnboardingContainer
     {...mocks.whenLoading}
@@ -38,6 +45,7 @@ const WithDropdown = () => (
 )
 
 export default {
+  WhenDeadEnd,
   WhenLoading,
   WithCardIconAndSubtitle,
   WithCardIconAndWithoutSubtitle,
