@@ -1648,6 +1648,58 @@
         "documentation_link": "https://docs.pagar.me/docs",
         "homologation_email": "homologacao@pagar.me"
       },
+      "access_docs_plataform": {
+        "plataforms": {
+          "biz_commerce": {
+            "link": "https://docs.pagar.me/v2/docs/instalando-o-m%C3%B3dulo-pagarme-na-bizcommerce",
+            "label": "a Biz Commerce"
+          },
+          "core": {
+            "link": "https://docs.pagar.me/v2/docs/instalando-o-m%C3%B3dulo-pagarme-na-plataforma-core",
+            "label": "a Core"
+          },
+          "ez_commerce": {
+            "link": "https://docs.pagar.me/v2/docs/configurando-o-m%C3%B3dulo-pagarme-na-plataforma-ez-commerce",
+            "label": "a EzCommerce"
+          },
+          "iset": {
+            "link": "https://docs.pagar.me/v1/docs/instalando-o-m%C3%B3dulo-pagarme-na-plataforma-iset",
+            "label": "a Iset"
+          },
+          "loja_integrada": {
+            "link": "https://docs.pagar.me/v2/docs/instalando-o-m%C3%B3dulo-pagarme-na-loja-integrada",
+            "label": "a Loja Integrada"
+          },
+          "magento": {
+            "link": "https://docs.pagar.me/v2/docs/instalando-modulo-magento",
+            "label": "a Magento"
+          },
+          "open_cart": {
+            "link": "https://docs.pagar.me/v2/docs/instalando-modulo-opencart",
+            "label": "a OpenCart"
+          },
+          "presta_shop": {
+            "link": "https://docs.pagar.me/v1/docs/instalando-modulo-prestashop",
+            "label": "a Prestashop"
+          },
+          "signativa": {
+            "link": "https://docs.pagar.me/v1/docs/instalando-o-m%C3%B3dulo-pagarme-na-plataforma-signashop",
+            "label": "a Signativa"
+          },
+          "vtex": {
+            "link": "https://docs.pagar.me/v1/docs/instalando-o-m%C3%B3dulo-pagarme-na-plataforma-vtex",
+            "label": "a VTEX"
+          },
+          "woocommerce": {
+            "link": "https://docs.pagar.me/v2/docs/instalando-plugin-pagarme-woocommerce",
+            "label": "a Woocommerce"
+          },
+          "xtech": {
+            "link": "https://docs.pagar.me/docs/instalando-o-m%C3%B3dulo-pagarme-na-xtech",
+            "label": "a Xtech"
+          }
+        }
+      },
       "access_material": {
         "button_label": "Acessar material",
         "title": "Principais dúvidas que você pode ter",
