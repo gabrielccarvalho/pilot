@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import {
@@ -19,6 +19,9 @@ import {
   when,
 } from 'ramda'
 import { translate } from 'react-i18next'
+import {
+  requestOnboardingAnswers as requestOnboardingAnswersAction,
+} from '../Home/actions'
 import EmptyStateContainer from '../../containers/EmptyState'
 import { withError } from '../ErrorBoundary'
 import environment from '../../environment'
@@ -63,6 +66,10 @@ const getFees = pipe(
   })
 )
 
+const mapDispatchToProps = {
+  requestOnboardingAnswers: requestOnboardingAnswersAction,
+}
+
 const mapStateToProps = ({
   account: {
     company,
@@ -81,7 +88,7 @@ const mapStateToProps = ({
 
 const enhanced = compose(
   translate(),
-  connect(mapStateToProps),
+  connect(mapStateToProps, mapDispatchToProps),
   withError
 )
 
@@ -96,21 +103,28 @@ const EmptyState = ({
   history,
   isAdmin,
   onboardingAnswers,
+  requestOnboardingAnswers,
   t,
   userName,
-}) => (
-  <EmptyStateContainer
-    apiKey={accessKeys.apiKey}
-    encryptionKey={accessKeys.encryptionKey}
-    environment={environment}
-    fees={fees}
-    isAdmin={isAdmin}
-    onboardingAnswers={onboardingAnswers}
-    onDisableWelcome={hideEmptyState(history.push)}
-    t={t}
-    userName={userName}
-  />
-)
+}) => {
+  useEffect(() => {
+    requestOnboardingAnswers()
+  }, [requestOnboardingAnswers])
+
+  return (
+    <EmptyStateContainer
+      apiKey={accessKeys.apiKey}
+      encryptionKey={accessKeys.encryptionKey}
+      environment={environment}
+      fees={fees}
+      isAdmin={isAdmin}
+      onboardingAnswers={onboardingAnswers}
+      onDisableWelcome={hideEmptyState(history.push)}
+      t={t}
+      userName={userName}
+    />
+  )
+}
 
 EmptyState.propTypes = {
   accessKeys: PropTypes.shape({
@@ -133,6 +147,7 @@ EmptyState.propTypes = {
   }).isRequired,
   isAdmin: PropTypes.bool.isRequired,
   onboardingAnswers: PropTypes.shape({}),
+  requestOnboardingAnswers: PropTypes.func.isRequired,
   t: PropTypes.func.isRequired,
   userName: PropTypes.string,
 }
