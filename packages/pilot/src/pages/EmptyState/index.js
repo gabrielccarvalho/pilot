@@ -68,10 +68,14 @@ const mapStateToProps = ({
     company,
     user,
   },
+  home: {
+    onboardingAnswers,
+  },
 }) => ({
   accessKeys: getAccessKeys(company),
   fees: getFees(company),
   isAdmin: hasAdminPermission(user),
+  onboardingAnswers,
   userName: getUserName(user),
 })
 
@@ -87,7 +91,13 @@ const hideEmptyState = push => () => {
 }
 
 const EmptyState = ({
-  accessKeys, fees, history, isAdmin, t, userName,
+  accessKeys,
+  fees,
+  history,
+  isAdmin,
+  onboardingAnswers,
+  t,
+  userName,
 }) => (
   <EmptyStateContainer
     apiKey={accessKeys.apiKey}
@@ -95,6 +105,7 @@ const EmptyState = ({
     environment={environment}
     fees={fees}
     isAdmin={isAdmin}
+    onboardingAnswers={onboardingAnswers}
     onDisableWelcome={hideEmptyState(history.push)}
     t={t}
     userName={userName}
@@ -121,6 +132,7 @@ EmptyState.propTypes = {
     push: PropTypes.func.isRequired,
   }).isRequired,
   isAdmin: PropTypes.bool.isRequired,
+  onboardingAnswers: PropTypes.shape({}),
   t: PropTypes.func.isRequired,
   userName: PropTypes.string,
 }
@@ -128,6 +140,7 @@ EmptyState.propTypes = {
 EmptyState.defaultProps = {
   accessKeys: {},
   fees: {},
+  onboardingAnswers: {},
   userName: '',
 }
 

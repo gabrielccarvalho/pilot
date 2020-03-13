@@ -1649,6 +1649,9 @@
         "homologation_email": "homologacao@pagar.me"
       },
       "access_docs_plataform": {
+        "button_label": "Acessar guia",
+        "title": "Aprenda a integrar com {{plataformLabel}}",
+        "subtitle": "Você vai ver como é fácil integrar com a nossa extensão.",
         "plataforms": {
           "biz_commerce": {
             "link": "https://docs.pagar.me/v2/docs/instalando-o-m%C3%B3dulo-pagarme-na-bizcommerce",
