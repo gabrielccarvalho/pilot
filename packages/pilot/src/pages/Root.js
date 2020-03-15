@@ -20,6 +20,7 @@ import { inactiveCompanyLogin } from '../vendor/googleTagManager'
 
 import Account from './Account'
 import LoggedArea from './LoggedArea'
+import Onboarding from './Onboarding/Onboarding'
 
 import environment from '../environment'
 import { page as appcuesPage } from '../vendor/appcues'
@@ -122,6 +123,10 @@ class Root extends Component {
 
     if (!user && !company) {
       return null
+    }
+
+    if (user && startsWith('/onboarding', path)) {
+      return <Route path="/onboarding" component={Onboarding} />
     }
 
     return <LoggedArea />
