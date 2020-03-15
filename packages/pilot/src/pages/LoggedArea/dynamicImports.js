@@ -33,7 +33,7 @@ const Recipients = lazy(() => import(
 ))
 
 const EmptyState = lazy(() => import(
-  /* webpackChunkName: "empty-state" */ '../EmptyState'
+  /* webpackChunkName: "empty-state" */ '../EmptyState/EmptyState'
 ))
 
 export {
