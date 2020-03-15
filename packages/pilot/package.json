@@ -4,6 +4,7 @@
   "homepage": ".",
   "private": true,
   "dependencies": {
+    "@xstate/react": "0.8.1",
     "classnames": "2.2.6",
     "clipboard-copy": "2.0.0",
     "cockpit": "0.0.1",
