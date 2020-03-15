@@ -611,7 +611,16 @@
       "advance_step": "Avançar",
       "last_step": "Finalizar",
       "skip": "Pular introdução",
-      "welcome": "Boas-vindas, {{userName}}!"
+      "welcome": "Boas-vindas, {{userName}}!",
+      "dead_ends": {
+        "platform_not_found": {
+          "title": "Não encontramos a plataforma informada em nosso sistema",
+          "description": "Caso tenha interesse de continuar a nossa parceria, entre em contato com alguma de nossas plataformas parceiras.",
+          "button_label": "Ver plataformas",
+          "button_link": "https://docs.pagar.me/page/plataformas-de-e-commerce-parceiras",
+          "skip_to_dashboard": "Avançar para a dashboard"
+        }
+      }
     },
     "recipient_detail": {
       "anticipation": "Antecipação",
